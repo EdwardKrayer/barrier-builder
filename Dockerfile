@@ -1,7 +1,9 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 	# [ init ]
 
+ENV TZ=America/Los_Angeles
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN export DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get upgrade -y
 

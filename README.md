@@ -15,3 +15,11 @@ Execute the following to build Barrier binaries from source, the binaries will b
 	export BARRIER_DIR=~/
 	mkdir -p $HOME/barrier-bin/
 	docker run --volume=$HOME/barrier-bin/:/root/src/barrier/bin/ --tty $USER/barrier-builder:latest
+
+## Installation Instructions:
+
+	sudo apt-get install libavahi-compat-libdnssd1
+	cd $BARRIER_DIR/barrier-bin
+	sudo cp -r ./usr/ /
+
+	
